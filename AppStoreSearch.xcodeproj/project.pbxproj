@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		B3C2CE76247B2A52000B4778 /* LoadingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE75247B2A52000B4778 /* LoadingPresentable.swift */; };
+		B3C2CE85247C5FD3000B4778 /* AutocompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE84247C5FD3000B4778 /* AutocompletePresenter.swift */; };
+		B3C2CE87247C6176000B4778 /* AutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE86247C6176000B4778 /* AutocompleteView.swift */; };
+		B3C2CE8D247C654A000B4778 /* AutocompleteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE8C247C654A000B4778 /* AutocompleteService.swift */; };
+		B3C2CE94247C6AEB000B4778 /* AppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE93247C6AEB000B4778 /* AppsView.swift */; };
+		B3C2CE96247C6BCE000B4778 /* AppsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE95247C6BCE000B4778 /* AppsPresenter.swift */; };
+		B3C2CE98247C6C49000B4778 /* AppsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE97247C6C49000B4778 /* AppsService.swift */; };
+		B3C2CE9A247C6DE8000B4778 /* AppResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE99247C6DE8000B4778 /* AppResponse.swift */; };
+		B3C2CE9C247C7663000B4778 /* AutocompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE9B247C7663000B4778 /* AutocompleteViewModel.swift */; };
+		B3C2CE9E247C7F9A000B4778 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE9D247C7F9A000B4778 /* SearchPresenter.swift */; };
+		B3C2CEAD247D5CED000B4778 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CEAC247D5CED000B4778 /* SearchView.swift */; };
+		B3C2CEAF247D5D29000B4778 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CEAE247D5D29000B4778 /* SearchService.swift */; };
+		B3C2CEB1247D6F0F000B4778 /* SearchCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CEB0247D6F0F000B4778 /* SearchCellView.swift */; };
+		B3C2CEB3247D7010000B4778 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CEB2247D7010000B4778 /* SearchHeaderView.swift */; };
 		B3C4130D247AEF77006DA4C4 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C4130C247AEF77006DA4C4 /* Launch Screen.storyboard */; };
 		B3C4130F247B011F006DA4C4 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4130E247B011F006DA4C4 /* Term.swift */; };
 		B3C41311247B012F006DA4C4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C41310247B012F006DA4C4 /* App.swift */; };
@@ -28,10 +41,10 @@
 		B3FBA9FE247ACC2C00039F13 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F2247ACC2C00039F13 /* SearchViewController.swift */; };
 		B3FBA9FF247ACC2C00039F13 /* ResultsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F3247ACC2C00039F13 /* ResultsContainerViewController.swift */; };
 		B3FBAA00247ACC2C00039F13 /* ContentStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F4247ACC2C00039F13 /* ContentStateViewController.swift */; };
-		B3FBAA01247ACC2C00039F13 /* SuggestedTermsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F6247ACC2C00039F13 /* SuggestedTermsTableViewController.swift */; };
-		B3FBAA02247ACC2D00039F13 /* SuggestedTermTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F7247ACC2C00039F13 /* SuggestedTermTableViewCell.swift */; };
-		B3FBAA03247ACC2D00039F13 /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F9247ACC2C00039F13 /* AppTableViewCell.swift */; };
-		B3FBAA04247ACC2D00039F13 /* AppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9FA247ACC2C00039F13 /* AppsTableViewController.swift */; };
+		B3FBAA01247ACC2C00039F13 /* AutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F6247ACC2C00039F13 /* AutocompleteViewController.swift */; };
+		B3FBAA02247ACC2D00039F13 /* AutocompleteCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F7247ACC2C00039F13 /* AutocompleteCellView.swift */; };
+		B3FBAA03247ACC2D00039F13 /* AppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9F9247ACC2C00039F13 /* AppCellView.swift */; };
+		B3FBAA04247ACC2D00039F13 /* AppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBA9FA247ACC2C00039F13 /* AppsViewController.swift */; };
 		B3FBAA13247AD5B500039F13 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B3FBAA12247AD5B500039F13 /* Kingfisher */; };
 		B3FBAA5D247AEBAE00039F13 /* UIImageView+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBAA3A247AEBAE00039F13 /* UIImageView+Cache.swift */; };
 		B3FBAA5E247AEBAE00039F13 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FBAA3B247AEBAE00039F13 /* ViewCodable.swift */; };
@@ -82,6 +95,19 @@
 
 /* Begin PBXFileReference section */
 		B3C2CE75247B2A52000B4778 /* LoadingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresentable.swift; sourceTree = "<group>"; };
+		B3C2CE84247C5FD3000B4778 /* AutocompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompletePresenter.swift; sourceTree = "<group>"; };
+		B3C2CE86247C6176000B4778 /* AutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteView.swift; sourceTree = "<group>"; };
+		B3C2CE8C247C654A000B4778 /* AutocompleteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteService.swift; sourceTree = "<group>"; };
+		B3C2CE93247C6AEB000B4778 /* AppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsView.swift; sourceTree = "<group>"; };
+		B3C2CE95247C6BCE000B4778 /* AppsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPresenter.swift; sourceTree = "<group>"; };
+		B3C2CE97247C6C49000B4778 /* AppsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsService.swift; sourceTree = "<group>"; };
+		B3C2CE99247C6DE8000B4778 /* AppResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResponse.swift; sourceTree = "<group>"; };
+		B3C2CE9B247C7663000B4778 /* AutocompleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteViewModel.swift; sourceTree = "<group>"; };
+		B3C2CE9D247C7F9A000B4778 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		B3C2CEAC247D5CED000B4778 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		B3C2CEAE247D5D29000B4778 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		B3C2CEB0247D6F0F000B4778 /* SearchCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellView.swift; sourceTree = "<group>"; };
+		B3C2CEB2247D7010000B4778 /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 		B3C4130C247AEF77006DA4C4 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B3C4130E247B011F006DA4C4 /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 		B3C41310247B012F006DA4C4 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -108,10 +134,10 @@
 		B3FBA9F2247ACC2C00039F13 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B3FBA9F3247ACC2C00039F13 /* ResultsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsContainerViewController.swift; sourceTree = "<group>"; };
 		B3FBA9F4247ACC2C00039F13 /* ContentStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentStateViewController.swift; sourceTree = "<group>"; };
-		B3FBA9F6247ACC2C00039F13 /* SuggestedTermsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedTermsTableViewController.swift; sourceTree = "<group>"; };
-		B3FBA9F7247ACC2C00039F13 /* SuggestedTermTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedTermTableViewCell.swift; sourceTree = "<group>"; };
-		B3FBA9F9247ACC2C00039F13 /* AppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
-		B3FBA9FA247ACC2C00039F13 /* AppsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsTableViewController.swift; sourceTree = "<group>"; };
+		B3FBA9F6247ACC2C00039F13 /* AutocompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteViewController.swift; sourceTree = "<group>"; };
+		B3FBA9F7247ACC2C00039F13 /* AutocompleteCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteCellView.swift; sourceTree = "<group>"; };
+		B3FBA9F9247ACC2C00039F13 /* AppCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCellView.swift; sourceTree = "<group>"; };
+		B3FBA9FA247ACC2C00039F13 /* AppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsViewController.swift; sourceTree = "<group>"; };
 		B3FBAA3A247AEBAE00039F13 /* UIImageView+Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Cache.swift"; path = "Sources/UIImageView+Cache.swift"; sourceTree = "<group>"; };
 		B3FBAA3B247AEBAE00039F13 /* ViewCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewCodable.swift; path = Sources/ViewCodable.swift; sourceTree = "<group>"; };
 		B3FBAA3D247AEBAE00039F13 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
@@ -176,14 +202,141 @@
 			path = Loading;
 			sourceTree = "<group>";
 		};
-		B3C41314247B0151006DA4C4 /* Models */ = {
+		B3C2CE83247C5FBE000B4778 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B3FBA9F7247ACC2C00039F13 /* AutocompleteCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B3C2CE88247C64B6000B4778 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B3C4130E247B011F006DA4C4 /* Term.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B3C2CE89247C64BB000B4778 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CE9F247C82DA000B4778 /* View */,
+				B3FBA9F6247ACC2C00039F13 /* AutocompleteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B3C2CE8A247C64C0000B4778 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CE84247C5FD3000B4778 /* AutocompletePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B3C2CE8B247C64FD000B4778 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CE8C247C654A000B4778 /* AutocompleteService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B3C2CE8E247C6A74000B4778 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CE97247C6C49000B4778 /* AppsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B3C2CE8F247C6A7B000B4778 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				B3C41310247B012F006DA4C4 /* App.swift */,
+				B3C2CE99247C6DE8000B4778 /* AppResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B3C2CE90247C6A7F000B4778 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CE92247C6A96000B4778 /* Cell */,
+				B3FBA9FA247ACC2C00039F13 /* AppsViewController.swift */,
+				B3C2CE93247C6AEB000B4778 /* AppsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B3C2CE91247C6A84000B4778 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CE95247C6BCE000B4778 /* AppsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B3C2CE92247C6A96000B4778 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B3FBA9F9247ACC2C00039F13 /* AppCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B3C2CE9F247C82DA000B4778 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CE83247C5FBE000B4778 /* Cell */,
+				B3C2CE86247C6176000B4778 /* AutocompleteView.swift */,
+				B3C2CE9B247C7663000B4778 /* AutocompleteViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B3C2CEB4247D704B000B4778 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				B3C41312247B013D006DA4C4 /* SearchType.swift */,
 			);
-			path = Models;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B3C2CEB5247D704F000B4778 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CEB8247D705F000B4778 /* Cell */,
+				B3FBA9F2247ACC2C00039F13 /* SearchViewController.swift */,
+				B3C2CEAC247D5CED000B4778 /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B3C2CEB6247D7053000B4778 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CE9D247C7F9A000B4778 /* SearchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B3C2CEB7247D7059000B4778 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CEAE247D5D29000B4778 /* SearchService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B3C2CEB8247D705F000B4778 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2CEB2247D7010000B4778 /* SearchHeaderView.swift */,
+				B3C2CEB0247D6F0F000B4778 /* SearchCellView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B3C41315247B019B006DA4C4 /* Extensions */ = {
@@ -203,8 +356,10 @@
 		B3C41324247B0229006DA4C4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B3FBA9F3247ACC2C00039F13 /* ResultsContainerViewController.swift */,
+				B3FBA9F4247ACC2C00039F13 /* ContentStateViewController.swift */,
 				B3FBA9F1247ACC2C00039F13 /* Search */,
-				B3FBA9F5247ACC2C00039F13 /* Suggestions */,
+				B3FBA9F5247ACC2C00039F13 /* Autocomplete */,
 				B3FBA9F8247ACC2C00039F13 /* Apps */,
 			);
 			path = Features;
@@ -273,7 +428,6 @@
 			isa = PBXGroup;
 			children = (
 				B3FBAA37247AEBAE00039F13 /* Common */,
-				B3C41314247B0151006DA4C4 /* Models */,
 				B3FBA9ED247ACC2C00039F13 /* Utilities */,
 				B3C41324247B0229006DA4C4 /* Features */,
 			);
@@ -292,27 +446,32 @@
 		B3FBA9F1247ACC2C00039F13 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				B3FBA9F2247ACC2C00039F13 /* SearchViewController.swift */,
-				B3FBA9F3247ACC2C00039F13 /* ResultsContainerViewController.swift */,
-				B3FBA9F4247ACC2C00039F13 /* ContentStateViewController.swift */,
+				B3C2CEB7247D7059000B4778 /* Service */,
+				B3C2CEB4247D704B000B4778 /* Model */,
+				B3C2CEB6247D7053000B4778 /* Presenter */,
+				B3C2CEB5247D704F000B4778 /* View */,
 			);
 			path = Search;
 			sourceTree = "<group>";
 		};
-		B3FBA9F5247ACC2C00039F13 /* Suggestions */ = {
+		B3FBA9F5247ACC2C00039F13 /* Autocomplete */ = {
 			isa = PBXGroup;
 			children = (
-				B3FBA9F6247ACC2C00039F13 /* SuggestedTermsTableViewController.swift */,
-				B3FBA9F7247ACC2C00039F13 /* SuggestedTermTableViewCell.swift */,
+				B3C2CE8B247C64FD000B4778 /* Service */,
+				B3C2CE88247C64B6000B4778 /* Model */,
+				B3C2CE8A247C64C0000B4778 /* Presenter */,
+				B3C2CE89247C64BB000B4778 /* Controller */,
 			);
-			path = Suggestions;
+			path = Autocomplete;
 			sourceTree = "<group>";
 		};
 		B3FBA9F8247ACC2C00039F13 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
-				B3FBA9FA247ACC2C00039F13 /* AppsTableViewController.swift */,
-				B3FBA9F9247ACC2C00039F13 /* AppTableViewCell.swift */,
+				B3C2CE8E247C6A74000B4778 /* Service */,
+				B3C2CE8F247C6A7B000B4778 /* Model */,
+				B3C2CE91247C6A84000B4778 /* Presenter */,
+				B3C2CE90247C6A7F000B4778 /* View */,
 			);
 			path = Apps;
 			sourceTree = "<group>";
@@ -551,31 +710,42 @@
 				B3FBAA67247AEBAE00039F13 /* LayoutViewConstraintSafeArea.swift in Sources */,
 				B3FBAA76247AEBAE00039F13 /* UITableView+Reusable.swift in Sources */,
 				B3FBAA6F247AEBAE00039F13 /* LayoutPriortizable.swift in Sources */,
+				B3C2CE9E247C7F9A000B4778 /* SearchPresenter.swift in Sources */,
 				B3FBAA72247AEBAE00039F13 /* AlertDisplayer.swift in Sources */,
+				B3C2CE85247C5FD3000B4778 /* AutocompletePresenter.swift in Sources */,
 				B3C2CE76247B2A52000B4778 /* LoadingPresentable.swift in Sources */,
 				B3FBAA6D247AEBAE00039F13 /* LayoutEdgeInsets.swift in Sources */,
+				B3C2CEB3247D7010000B4778 /* SearchHeaderView.swift in Sources */,
 				B3C41322247B01D1006DA4C4 /* Array + SafeIndex.swift in Sources */,
+				B3C2CEAF247D5D29000B4778 /* SearchService.swift in Sources */,
 				B3FBAA64247AEBAE00039F13 /* LayoutConstraintMakerExtendable.swift in Sources */,
 				B3FBA9FE247ACC2C00039F13 /* SearchViewController.swift in Sources */,
-				B3FBAA03247ACC2D00039F13 /* AppTableViewCell.swift in Sources */,
+				B3C2CE94247C6AEB000B4778 /* AppsView.swift in Sources */,
+				B3FBAA03247ACC2D00039F13 /* AppCellView.swift in Sources */,
+				B3C2CE8D247C654A000B4778 /* AutocompleteService.swift in Sources */,
+				B3C2CE96247C6BCE000B4778 /* AppsPresenter.swift in Sources */,
 				B3FBAA60247AEBAE00039F13 /* DataSource.swift in Sources */,
 				B3FBA9B8247AC97700039F13 /* AppDelegate.swift in Sources */,
 				B3FBAA6C247AEBAE00039F13 /* LayoutConstraintType.swift in Sources */,
+				B3C2CE98247C6C49000B4778 /* AppsService.swift in Sources */,
+				B3C2CE9C247C7663000B4778 /* AutocompleteViewModel.swift in Sources */,
 				B3FBAA75247AEBAE00039F13 /* Reusable.swift in Sources */,
 				B3FBAA6B247AEBAE00039F13 /* LayoutView.swift in Sources */,
 				B3FBAA61247AEBAE00039F13 /* ViewModelOwner.swift in Sources */,
 				B3C41313247B013D006DA4C4 /* SearchType.swift in Sources */,
-				B3FBAA02247ACC2D00039F13 /* SuggestedTermTableViewCell.swift in Sources */,
+				B3FBAA02247ACC2D00039F13 /* AutocompleteCellView.swift in Sources */,
 				B3FBAA62247AEBAE00039F13 /* LayoutConstraintItem.swift in Sources */,
 				B3FBAA63247AEBAE00039F13 /* LayoutConstraintMaker.swift in Sources */,
 				B3C4131D247B01D1006DA4C4 /* String + CasePrefix.swift in Sources */,
 				B3FBAA71247AEBAE00039F13 /* String+Extension.swift in Sources */,
 				B3FBAA5E247AEBAE00039F13 /* ViewCodable.swift in Sources */,
+				B3C2CEAD247D5CED000B4778 /* SearchView.swift in Sources */,
+				B3C2CE9A247C6DE8000B4778 /* AppResponse.swift in Sources */,
 				B3FBAA5D247AEBAE00039F13 /* UIImageView+Cache.swift in Sources */,
 				B3C41321247B01D1006DA4C4 /* AutoLayoutHelper.swift in Sources */,
 				B3FBA9FF247ACC2C00039F13 /* ResultsContainerViewController.swift in Sources */,
 				B3FBAA69247AEBAE00039F13 /* LayoutConstraintItemable.swift in Sources */,
-				B3FBAA04247ACC2D00039F13 /* AppsTableViewController.swift in Sources */,
+				B3FBAA04247ACC2D00039F13 /* AppsViewController.swift in Sources */,
 				B3FBAA66247AEBAE00039F13 /* LayoutViewConstraint.swift in Sources */,
 				B3FBAA70247AEBAE00039F13 /* TableViewCell.swift in Sources */,
 				B3FBAA77247AEBAE00039F13 /* NibLoadable.swift in Sources */,
@@ -584,6 +754,8 @@
 				B3C41323247B01D1006DA4C4 /* UITableView + MainThread.swift in Sources */,
 				B3FBAA00247ACC2C00039F13 /* ContentStateViewController.swift in Sources */,
 				B3FBAA65247AEBAE00039F13 /* LayoutConstraintMakerSupportable.swift in Sources */,
+				B3C2CEB1247D6F0F000B4778 /* SearchCellView.swift in Sources */,
+				B3C2CE87247C6176000B4778 /* AutocompleteView.swift in Sources */,
 				B3C4131E247B01D1006DA4C4 /* UIViewController + Child.swift in Sources */,
 				B3FBAA68247AEBAE00039F13 /* LayoutConstraintMakerRelatable.swift in Sources */,
 				B3FBAA6A247AEBAE00039F13 /* LayoutConstraintSafeAreaItem.swift in Sources */,
@@ -592,7 +764,7 @@
 				B3FBAA6E247AEBAE00039F13 /* Typealiases.swift in Sources */,
 				B3C4130F247B011F006DA4C4 /* Term.swift in Sources */,
 				B3FBAA73247AEBAE00039F13 /* CardView.swift in Sources */,
-				B3FBAA01247ACC2C00039F13 /* SuggestedTermsTableViewController.swift in Sources */,
+				B3FBAA01247ACC2C00039F13 /* AutocompleteViewController.swift in Sources */,
 				B3C41320247B01D1006DA4C4 /* Bundle + JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

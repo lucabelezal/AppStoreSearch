@@ -1,10 +1,5 @@
 import Foundation
 
-struct AppResponse: Decodable {
-    var resultCount: Int
-    var results: [App]
-}
-
 struct App: Decodable {
     var name: String
     var genre: String

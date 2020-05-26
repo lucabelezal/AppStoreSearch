@@ -1,6 +1,6 @@
 import UIKit
 
-class SuggestedTermTableViewCell: UITableViewCell, Reusable {
+class AutocompleteCellView: UITableViewCell, Reusable {
     func set(term: String, searchedTerm: String) {
         let attributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 21),

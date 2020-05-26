@@ -67,7 +67,7 @@ public final class LoadingView: UIView {
         messageLabel.topAnchor.constraint(equalTo: indicatorView.bottomAnchor, constant: 16).isActive = true
         messageLabel.centerXAnchor.constraint(equalTo: indicatorView.centerXAnchor).isActive = true
         messageLabel.heightAnchor.constraint(equalToConstant: 24).isActive = true
-        messageLabel.text = "CARREGANDO"
+        messageLabel.text = "LOADING"
         messageLabel.textColor = .lightGray
         messageLabel.font = UIFont.systemFont(ofSize: 12, weight: .light)
 

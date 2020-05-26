@@ -1,7 +1,7 @@
 import Kingfisher
 import UIKit
 
-class AppTableViewCell: UITableViewCell, Reusable {
+class AppCellView: UITableViewCell, Reusable {
 
     let iconImageView: UIImageView = UIImageView()
     let nameLabel: UILabel = UILabel()
@@ -21,16 +21,19 @@ class AppTableViewCell: UITableViewCell, Reusable {
         setupView()
     }
 
+    @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(app: App) {
-        nameLabel.text = app.name
-        genreLabel.text = app.genre
-        iconImageView.kf.setImage(with: URL(string: app.icon))
-        for (index, screenshot) in app.screenshots.enumerated() {
-            screenshotImageViews?[safe: index]?.kf.setImage(with: URL(string: screenshot))
+    func configure(app: App?) {
+        if let app = app {
+            nameLabel.text = app.name
+            genreLabel.text = app.genre
+            iconImageView.kf.setImage(with: URL(string: app.icon))
+            for (index, screenshot) in app.screenshots.enumerated() {
+                screenshotImageViews?[safe: index]?.kf.setImage(with: URL(string: screenshot))
+            }
         }
     }
 
@@ -40,7 +43,7 @@ class AppTableViewCell: UITableViewCell, Reusable {
     }
 }
 
-extension AppTableViewCell: ViewCodable {
+extension AppCellView: ViewCodable {
 
     func configure() {
         screenshotStackView.contentMode = .scaleToFill
@@ -48,6 +51,7 @@ extension AppTableViewCell: ViewCodable {
         screenshotStackView.alignment = .center
         screenshotStackView.distribution = .fillEqually
         screenshotStackView.spacing = 10
+        selectionStyle = .none
     }
 
     func buildHierarchy() {
