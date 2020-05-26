@@ -10,6 +10,7 @@ class AutocompleteView: UIView {
 
     private let tableView: UITableView = UITableView()
     private let emptyView: EmptyStateView = EmptyStateView()
+    private let headerView = SearchHeaderView(frame: CGRect(origin: .zero, size: CGSize(width: .zero, height: 60)))
 
     private var suggestions: [String] = []
     private var searchedTerm: String = String()
@@ -28,6 +29,8 @@ class AutocompleteView: UIView {
         emptyView.isHidden = true
         self.suggestions = suggestions
         self.searchedTerm = searchedTerm
+
+        tableView.tableHeaderView = suggestions.isEmpty ? nil : headerView
 
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -73,6 +76,7 @@ extension AutocompleteView: ViewCodable {
 
     func render() {
          backgroundColor = .white
+         headerView.titleLabel.text = "Try Searching"
          emptyView.isHidden = true
          emptyView.setup(title: "Not found", message: "Try other suggestions")
     }

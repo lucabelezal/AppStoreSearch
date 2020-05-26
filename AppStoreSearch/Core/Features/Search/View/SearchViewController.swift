@@ -56,7 +56,7 @@ class SearchViewController: UITableViewController, LoadingPresentable {
 
         searchController = UISearchController(searchResultsController: resultsContainerViewController)
         searchController?.searchBar.delegate = self
-        searchController?.searchBar.placeholder = "Search"
+        searchController?.searchBar.placeholder = "Search for products and stores"
         searchController?.searchResultsUpdater = self
 
         definesPresentationContext = true
