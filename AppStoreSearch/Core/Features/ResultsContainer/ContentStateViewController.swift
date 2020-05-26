@@ -2,7 +2,7 @@ import UIKit
 
 class ContentStateViewController: UIViewController {
     private var state: UIState?
-    var shownViewController: UIViewController?
+    private var shownViewController: UIViewController?
 
     func transition(to newState: UIState) {
         shownViewController?.removeChildViewController()
@@ -10,7 +10,6 @@ class ContentStateViewController: UIViewController {
         addChildViewController(viewController)
         shownViewController = viewController
         state = newState
-        view.backgroundColor = .lightGray
     }
 }
 
@@ -38,9 +37,3 @@ extension ContentStateViewController {
         case empty
     }
 }
-
-//case productList(viewModel: ProductListViewModel)
-//case autocomplete(suggestions: [String])
-//case retry(error: PrintableError)
-//case empty
-//case notFound

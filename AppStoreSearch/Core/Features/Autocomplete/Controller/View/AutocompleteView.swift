@@ -9,14 +9,10 @@ class AutocompleteView: UIView {
     weak var delegate: AutocompleteViewDelegate?
 
     private let tableView: UITableView = UITableView()
+    private let emptyView: EmptyStateView = EmptyStateView()
+
     private var suggestions: [String] = []
     private var searchedTerm: String = String()
-
-    public var viewModel: AutocompleteViewModelProtocol? {
-        didSet {
-           updateView()
-        }
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,15 +24,22 @@ class AutocompleteView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func updateView() {
-        if let model = viewModel {
-            suggestions = model.suggestions
-            searchedTerm = model.searchedTerm
+    func showView(with suggestions: [String], searchedTerm: String) {
+        emptyView.isHidden = true
+        self.suggestions = suggestions
+        self.searchedTerm = searchedTerm
 
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
+    }
+
+    func showEmptyView() {
+        emptyView.isHidden = false
+    }
+
+    func hideEmptyView() {
+        emptyView.isHidden = true
     }
 }
 
@@ -49,7 +52,7 @@ extension AutocompleteView: ViewCodable {
     }
 
     func buildHierarchy() {
-        addView(tableView)
+        addView(tableView, emptyView)
     }
 
     func buildConstraints() {
@@ -59,10 +62,19 @@ extension AutocompleteView: ViewCodable {
             make.left.equalTo(layout.left)
             make.right.equalTo(layout.right)
         }
+
+        emptyView.layout.makeConstraints { make in
+            make.top.equalTo(layout.safeArea.top)
+            make.bottom.equalTo(layout.safeArea.bottom)
+            make.left.equalTo(layout.left)
+            make.right.equalTo(layout.right)
+        }
     }
 
     func render() {
          backgroundColor = .white
+         emptyView.isHidden = true
+         emptyView.setup(title: "Not found", message: "Try other suggestions")
     }
 }
 

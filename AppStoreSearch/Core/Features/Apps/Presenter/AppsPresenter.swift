@@ -23,13 +23,15 @@ class AppsPresenter: AppsPresenterProtocol {
                 self.view?.hideLoading()
                 switch result {
                 case let .success(apps):
+                    if apps.results.isEmpty {
+                        self.view?.showEmptyView()
+                    } else {
+                        let mediaUrls = apps.results.flatMap { $0.media }.compactMap { URL(string: $0) }
+                        let imagePrefetcher = ImagePrefetcher(urls: mediaUrls)
+                        imagePrefetcher.start()
 
-                    let mediaUrls = apps.results.flatMap { $0.media }.compactMap { URL(string: $0) }
-                    let imagePrefetcher = ImagePrefetcher(urls: mediaUrls)
-                    imagePrefetcher.start()
-
-                    self.view?.showView(with: apps.results)
-
+                        self.view?.showView(with: apps.results)
+                    }
                 case let .failure(error):
                     self.view?.showErrorView(with: error.localizedDescription)
                 }

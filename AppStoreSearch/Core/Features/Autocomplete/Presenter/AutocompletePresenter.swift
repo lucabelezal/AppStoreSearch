@@ -19,7 +19,11 @@ class AutocompletePresenter: AutocompletePresenterProtocol {
         service.fetchSuggestions(basedOn: searchText) { result in
             switch result {
             case let .success(terms):
-                self.view?.showView(with: terms)
+                if terms.isEmpty {
+                    self.view?.showEmptyView()
+                } else {
+                    self.view?.showView(with: terms)
+                }
             case let .failure(error):
                 self.view?.showErrorView(with: error.localizedDescription)
             }

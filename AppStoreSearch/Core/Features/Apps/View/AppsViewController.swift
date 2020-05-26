@@ -49,11 +49,11 @@ class AppsViewController: UITableViewController {
 
 extension AppsViewController: AppsViewControllerProtocol {
     func showView(with apps: [App]) {
-        appsView.apps = apps
+        appsView.updateView(with: apps)
     }
 
     func showErrorView(with message: String) {
-
+        appsView.showEmptyView(message: message)
     }
 
     func showRetryView() {
@@ -61,11 +61,11 @@ extension AppsViewController: AppsViewControllerProtocol {
     }
 
     func showEmptyView() {
-
+        appsView.showEmptyView()
     }
 
     func hideEmptyView() {
-
+        appsView.hideEmptyView()
     }
 
     func hideRetryView() {

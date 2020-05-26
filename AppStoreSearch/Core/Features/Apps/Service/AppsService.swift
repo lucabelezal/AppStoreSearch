@@ -20,7 +20,8 @@ class AppsService: AppsServiceProtocol {
             let baseURL = "https://itunes.apple.com/search?term="
             let url = URL(string: "\(baseURL)\(encodedTerm)&entity=software,iPadSoftware&limit=10")!
 
-            dataTask = URLSession.shared.dataTask(with: url) { data, _, _ in
+
+            dataTask = URLSession.shared.dataTask(with: url) { data, _, error in
                 guard let data = data else { return }
                 do {
                     let response = try JSONDecoder().decode(AppResponse.self, from: data)

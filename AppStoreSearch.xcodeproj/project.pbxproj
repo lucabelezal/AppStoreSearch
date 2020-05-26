@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B30021FC247D93C6005945D2 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30021FB247D93C6005945D2 /* EmptyStateView.swift */; };
 		B3C2CE76247B2A52000B4778 /* LoadingPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE75247B2A52000B4778 /* LoadingPresentable.swift */; };
 		B3C2CE85247C5FD3000B4778 /* AutocompletePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE84247C5FD3000B4778 /* AutocompletePresenter.swift */; };
 		B3C2CE87247C6176000B4778 /* AutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE86247C6176000B4778 /* AutocompleteView.swift */; };
@@ -15,7 +16,6 @@
 		B3C2CE96247C6BCE000B4778 /* AppsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE95247C6BCE000B4778 /* AppsPresenter.swift */; };
 		B3C2CE98247C6C49000B4778 /* AppsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE97247C6C49000B4778 /* AppsService.swift */; };
 		B3C2CE9A247C6DE8000B4778 /* AppResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE99247C6DE8000B4778 /* AppResponse.swift */; };
-		B3C2CE9C247C7663000B4778 /* AutocompleteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE9B247C7663000B4778 /* AutocompleteViewModel.swift */; };
 		B3C2CE9E247C7F9A000B4778 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CE9D247C7F9A000B4778 /* SearchPresenter.swift */; };
 		B3C2CEAD247D5CED000B4778 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CEAC247D5CED000B4778 /* SearchView.swift */; };
 		B3C2CEAF247D5D29000B4778 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C2CEAE247D5D29000B4778 /* SearchService.swift */; };
@@ -94,6 +94,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B30021FB247D93C6005945D2 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		B3C2CE75247B2A52000B4778 /* LoadingPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresentable.swift; sourceTree = "<group>"; };
 		B3C2CE84247C5FD3000B4778 /* AutocompletePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompletePresenter.swift; sourceTree = "<group>"; };
 		B3C2CE86247C6176000B4778 /* AutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteView.swift; sourceTree = "<group>"; };
@@ -102,7 +103,6 @@
 		B3C2CE95247C6BCE000B4778 /* AppsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsPresenter.swift; sourceTree = "<group>"; };
 		B3C2CE97247C6C49000B4778 /* AppsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsService.swift; sourceTree = "<group>"; };
 		B3C2CE99247C6DE8000B4778 /* AppResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResponse.swift; sourceTree = "<group>"; };
-		B3C2CE9B247C7663000B4778 /* AutocompleteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteViewModel.swift; sourceTree = "<group>"; };
 		B3C2CE9D247C7F9A000B4778 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		B3C2CEAC247D5CED000B4778 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B3C2CEAE247D5D29000B4778 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
@@ -194,6 +194,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B30021F4247D92C6005945D2 /* ResultsContainer */ = {
+			isa = PBXGroup;
+			children = (
+				B3FBA9F3247ACC2C00039F13 /* ResultsContainerViewController.swift */,
+				B3FBA9F4247ACC2C00039F13 /* ContentStateViewController.swift */,
+			);
+			path = ResultsContainer;
+			sourceTree = "<group>";
+		};
 		B3C2CE74247B2A45000B4778 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +300,6 @@
 			children = (
 				B3C2CE83247C5FBE000B4778 /* Cell */,
 				B3C2CE86247C6176000B4778 /* AutocompleteView.swift */,
-				B3C2CE9B247C7663000B4778 /* AutocompleteViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,8 +364,7 @@
 		B3C41324247B0229006DA4C4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				B3FBA9F3247ACC2C00039F13 /* ResultsContainerViewController.swift */,
-				B3FBA9F4247ACC2C00039F13 /* ContentStateViewController.swift */,
+				B30021F4247D92C6005945D2 /* ResultsContainer */,
 				B3FBA9F1247ACC2C00039F13 /* Search */,
 				B3FBA9F5247ACC2C00039F13 /* Autocomplete */,
 				B3FBA9F8247ACC2C00039F13 /* Apps */,
@@ -491,6 +498,7 @@
 				B3FBAA53247AEBAE00039F13 /* AlertDisplayer.swift */,
 				B3FBAA3A247AEBAE00039F13 /* UIImageView+Cache.swift */,
 				B3FBAA3B247AEBAE00039F13 /* ViewCodable.swift */,
+				B30021FB247D93C6005945D2 /* EmptyStateView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -727,8 +735,8 @@
 				B3FBAA60247AEBAE00039F13 /* DataSource.swift in Sources */,
 				B3FBA9B8247AC97700039F13 /* AppDelegate.swift in Sources */,
 				B3FBAA6C247AEBAE00039F13 /* LayoutConstraintType.swift in Sources */,
+				B30021FC247D93C6005945D2 /* EmptyStateView.swift in Sources */,
 				B3C2CE98247C6C49000B4778 /* AppsService.swift in Sources */,
-				B3C2CE9C247C7663000B4778 /* AutocompleteViewModel.swift in Sources */,
 				B3FBAA75247AEBAE00039F13 /* Reusable.swift in Sources */,
 				B3FBAA6B247AEBAE00039F13 /* LayoutView.swift in Sources */,
 				B3FBAA61247AEBAE00039F13 /* ViewModelOwner.swift in Sources */,

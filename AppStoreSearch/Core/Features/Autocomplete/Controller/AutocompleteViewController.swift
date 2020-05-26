@@ -1,7 +1,7 @@
 import UIKit
 
 protocol AutocompleteViewControllerProtocol {
-    func showView(with terms: [Term])
+    func showView(with terms: [String])
     func showErrorView(with message: String)
     func showRetryView()
     func showEmptyView()
@@ -43,8 +43,8 @@ class AutocompleteViewController: UIViewController {
 }
 
 extension AutocompleteViewController: AutocompleteViewControllerProtocol {
-    func showView(with terms: [Term]) {
-        autocompleteView.viewModel = AutocompleteViewModel(terms: terms, searchedTerm: searchedTerm)
+    func showView(with terms: [String]) {
+        autocompleteView.showView(with: terms, searchedTerm: searchedTerm)
     }
 
     func showErrorView(with message: String) {
@@ -56,11 +56,11 @@ extension AutocompleteViewController: AutocompleteViewControllerProtocol {
     }
 
     func showEmptyView() {
-
+        autocompleteView.showEmptyView()
     }
 
     func hideEmptyView() {
-
+        autocompleteView.hideEmptyView()
     }
 
     func hideRetryView() {

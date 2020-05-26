@@ -9,12 +9,9 @@ class AppsView: UIView {
     weak var delegate: AppsViewDelegate?
     
     private let tableView: UITableView = UITableView()
+    private let emptyView: EmptyStateView = EmptyStateView()
 
-    var apps: [App]? {
-        didSet {
-            updateView()
-        }
-    }
+    private var apps: [App] = []
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,10 +23,21 @@ class AppsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func updateView() {
+    func updateView(with apps: [App]) {
+        self.emptyView.isHidden = true
+        self.apps = apps
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+
+    func showEmptyView(title: String? = nil, message: String? = nil) {
+        emptyView.setup(title: "Not found", message: message)
+        emptyView.isHidden = false
+    }
+
+    func hideEmptyView() {
+        emptyView.isHidden = true
     }
 }
 
@@ -42,7 +50,7 @@ extension AppsView: ViewCodable {
     }
 
     func buildHierarchy() {
-        addView(tableView)
+        addView(tableView, emptyView)
     }
 
     func buildConstraints() {
@@ -52,21 +60,30 @@ extension AppsView: ViewCodable {
             make.left.equalTo(layout.left)
             make.right.equalTo(layout.right)
         }
+
+        emptyView.layout.makeConstraints { make in
+            make.top.equalTo(layout.safeArea.top)
+            make.bottom.equalTo(layout.safeArea.bottom)
+            make.left.equalTo(layout.left)
+            make.right.equalTo(layout.right)
+        }
     }
 
     func render() {
          backgroundColor = .white
+        emptyView.isHidden = true
+        emptyView.setup(title: "Not found", message: "Try other term")
     }
 }
 
 extension AppsView: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return apps?.count ?? 0
+        return apps.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: AppCellView = tableView.dequeueReusableCell(for: indexPath)
-        cell.configure(app: apps?[indexPath.row])
+        cell.configure(app: apps[indexPath.row])
         return cell
     }
 
