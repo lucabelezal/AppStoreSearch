@@ -13,14 +13,8 @@ public protocol SearchViewControllerProtocol: class {
 
 class SearchViewController: UITableViewController, LoadingPresentable {
 
-//    var searchView: SearchView {
-//        return view as! SearchView
-//    }
 
-    var searchView = SearchView(frame: CGRect(x: .zero, y: .zero,
-                                              width: UIScreen.main.bounds.width,
-                                              height:  UIScreen.main.bounds.height))
-
+    private var searchView = SearchView()
     private var searchController: UISearchController?
     private let resultsContainerViewController =  ResultsContainerViewController()
 
@@ -42,9 +36,9 @@ class SearchViewController: UITableViewController, LoadingPresentable {
 
     override func loadView() {
         super.loadView()
-        //view = SearchView()
-        view.backgroundColor = .white
+        searchView.frame = view.frame
         tableView.tableHeaderView = searchView
+        view.backgroundColor = .white
     }
 
 
